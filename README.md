@@ -48,5 +48,3 @@ $ react-native run-ios
     "redux-thunk": "^2.1.0"
   },
   ```
-
-如果大家觉得有用欢迎给个start✨✨✨✨✨✨✨✨✨
