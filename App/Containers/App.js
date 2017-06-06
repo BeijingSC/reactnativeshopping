@@ -19,16 +19,21 @@ class App extends React.Component {
         return (
             <View style={{ flex: 1 }}>
                 <StatusBarIOS barStyle="default"/>
-
+                /*
+                 使用导航器可以让你在应用的不同场景（页面）间进行切换。导航器通过路由对象来分辨不同的场景。利用renderScene方法，导航栏可以根据指定的路由来渲染场景。
+                 可以通过configureScene属性获取指定路由对象的配置信息，从而改变场景的动画或者手势。查看Navigator.SceneConfigs来获取默认的动画和更多的场景配置选项。
+                 */
                 <Navigator
+                    //定义启动时加载的路由。路由是导航栏用来识别渲染场景的一个对象。
                     initialRoute={{ name: 'Splash', component: Splash }}
-
+                    //用来配置场景动画和手势
                     configureScene={(route) => {
                         if (route.sceneConfig) {
                             return route.sceneConfig;
                         }
                         return Navigator.SceneConfigs.FloatFromRight;
                     } }
+                   //用来渲染指定路由的场景。调用的参数是路由和导航器。
                     renderScene={(route, navigator) => {
                         let Component = route.component;
                         return (

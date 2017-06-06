@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 import React from 'react';
 import {
     StyleSheet,
@@ -17,7 +10,6 @@ export default class StatusBarIOS extends React.Component {
         return (
             <View >
                 <StatusBar {...this.props}/>
-                
             </View>
         )
     }
@@ -27,6 +19,5 @@ const styles = StyleSheet.create({
     statusBar: {
         flex: 1,
         height: 20,
-        
     }
 })

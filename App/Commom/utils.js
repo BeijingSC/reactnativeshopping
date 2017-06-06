@@ -45,10 +45,11 @@ let Util = {
             .then((responseText) => {
                 resolve(JSON.parse(responseText));
             })
-             .catch((err) => {
+            .catch((err) => {
                 reject(new Error(err));
                 console.warn(err);
-            }).done();
+            })
+            .done();
         });
     }
 }

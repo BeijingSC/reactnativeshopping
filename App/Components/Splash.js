@@ -12,13 +12,12 @@ import {
 import TabBarView from '../Containers/TabBarView';
 
 var {height, width} = Dimensions.get('window');
-
 class Splash extends React.Component {
   constructor(props) {
     super(props);
   }
   componentDidMount() {
-    const {navigator} = this.props;
+     const {navigator} = this.props;
      this.timer=setTimeout(() => {
       InteractionManager.runAfterInteractions(() => {
         navigator.resetTo({
@@ -31,7 +30,6 @@ class Splash extends React.Component {
   componentWillUnmount() {
     this.timer && clearTimeout(this.timer);
   }
- 
   render() {
     return (
       <View style={{flex:1}}>

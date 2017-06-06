@@ -1,12 +1,9 @@
-
-
-``
 import React, { Component } from 'react';
 import {
     View,
     Text,
     Image,
-        TabBarIOS,
+    TabBarIOS,
 
 } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
@@ -26,10 +23,7 @@ import HomeContainer from './HomeContainer';
 import BrandContainer from './BrandContainer';
 import ShopCarContainer from './ShopCarContainer';
 
-
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
-
 
 
 
@@ -59,10 +53,10 @@ export default class TarBarView extends Component {
     }
     render() {
         return (
-            // <TabNavigator tabBarStyle={{ height: 60 }}> 
+            // <TabNavigator tabBarStyle={{ height: 60 }}>
             //     {
             //         tabBarItems.map((controller, i) => {
-            //             //获取容器页面 
+            //             //获取容器页面
             //             //下面就讲navigation 赋值进去,这样没有容器页面就有nav
             //             let Component = controller.component;
             //             return (
@@ -109,6 +103,4 @@ export default class TarBarView extends Component {
             </TabBarIOS>
         );
     }
-
-
 }
