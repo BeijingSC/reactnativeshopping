@@ -76,14 +76,12 @@ export default class TarBarView extends Component {
             // //这里都可以对navigator 进行传递
 
 
-                        <TabBarIOS tintColor={'red'} >
+            <TabBarIOS tintColor={'red'} >
                 {
                     tabBarItems.map((controller, i) => {
-
                         let Component = controller.component;
-
                         return (
-                            <FontAwesome.TabBarItem
+                           <FontAwesome.TabBarItem
                                 key={i}
                                 title={controller.title}
                                 iconName={controller.icon}
@@ -95,7 +93,7 @@ export default class TarBarView extends Component {
                                     })
                                 }}
                             >
-                                <Component navigator = {this.props.navigator} {...this.props}/>
+                            <Component navigator = {this.props.navigator} {...this.props}/>
                             </FontAwesome.TabBarItem>
                         )
                     })
